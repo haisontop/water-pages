@@ -15,10 +15,10 @@ const Navigation = () => {
                         <Link href="/about">About</Link>
                     </div>
                     <div className='mr-8 my-auto'>
-                        <Link href="/solution">Solutions</Link>
+                        <Link href="/solutions/OTC and Block Trading">Solutions</Link>
                     </div>
                     <div className='mr-8 my-auto'>
-                        <Link href="/contect">Contect</Link>
+                        <Link href="/contact">Contect</Link>
                     </div>
                 </div>
             </div>

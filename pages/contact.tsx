@@ -1,84 +1,101 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Layout from '../component/Layout'
+import Navigation from '../component/Navigation'
 
 const Contact: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div>
+      <Layout>
+        <div className='bg-fill pb-36'>
+          <Navigation />
+          <div className='lg:px-120px mt-91px'>
+            <h1 className='text-4xl font-bold text-primary'>Contact</h1>
+          </div>
         </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+        <div className='pt-20 bg-white -mt-20 rounded-large'>
+          <div className='grid grid-cols-2 gap-20 px-120px'>
+            <div>
+              <img src="/images/logo_2.png" alt="" width="" />
+              <div className='mt-56.59px'>
+                <h3 className='font-bold text-2xl text-primary'>Email</h3>
+                <p className='mt-3 text-third font-light'>liquidity@waterfort.io</p>
+              </div>
+            </div>
+            <div>
+              <form>
+                <div>
+                  <label>
+                    <span className='text-seccondery'>Name</span><br />
+                    <input type="text" placeholder='Input your name' className='border-2 w-full rounded-sm outline-none px-3 mt-1 py-2' />
+                  </label>
+                </div>
+                <div className='mt-7'>
+                  <label>
+                    <span className='text-seccondery'>Email</span><br />
+                    <input type="email" placeholder='Input your email' className='border-2 w-full rounded-sm outline-none px-3 mt-1 py-2' />
+                  </label>
+                </div>
+                <div className='mt-7'>
+                  <label>
+                    <span className='text-seccondery'>Phone</span><br />
+                    <div className='flex border-2 rounded-sm px-2'>
+                      <select className='outline-none text-third font-semibold'>
+                        <option value="+880">880</option>
+                        <option value="+996">996</option>
+                      </select>
+                      <input type="text" placeholder='Input your phone number' className='w-full rounded-sm outline-none px-3 mt-1 py-2 ml-3' />
+                    </div>
+                  </label>
+                </div>
+                <div className='mt-7'>
+                  <label>
+                    <span className='text-seccondery'>Company</span><br />
+                    <input type="text" placeholder='Input your company' className='border-2 w-full rounded-sm outline-none px-3 mt-1 py-2' />
+                  </label>
+                </div>
+                <div className='mt-7'>
+                  <label>
+                    <span className='text-seccondery'>Telegram name</span><br />
+                    <input type="text" placeholder='Input your Telegram name' className='border-2 w-full rounded-sm outline-none px-3 mt-1 py-2' />
+                  </label>
+                </div>
+                <div className='mt-7'>
+                  <label>
+                    <span className='text-seccondery'>Country</span><br />
+                    <select className='outline-none text-third w-full mt-1 px-3 border-2 py-2 rounded-sm'>
+                      <option>Select yout country</option>
+                      <option value="+880">Bangladesh</option>
+                      <option value="+996">China</option>
+                    </select>
+                  </label>
+                </div>
+                <div className='mt-7 text-primary'>
+                  <label>
+                    <span className='text-seccondery'>I’m Interested in</span><br />
+                    <input type="checkbox" className='mt-5' value="OTC and Block Trading" />
+                    <span className='ml-3'>OTC and Block Trading</span><br />
+                    <input type="checkbox" className='mt-3' value="Order Book Market Making" />
+                    <span className='ml-3'>Order Book Market Making</span><br />
+                    <input type="checkbox" className='mt-3' value='Algorithmic Execution Orders' />
+                    <span className='ml-3'>Algorithmic Execution Orders</span><br />
+                    <input type="checkbox" className='mt-3' value="Others" />
+                    <span className='ml-3'>Others</span><br />
+                  </label>
+                </div>
+                <div className='mt-7'>
+                  <label>
+                    <span className='text-seccondery'>Message</span><br />
+                    <textarea placeholder='Input your message' className='border-2 h-40 w-full rounded-sm outline-none px-3 mt-1 py-2' />
+                  </label>
+                </div>
+                <button className='button text-white px-7 py-3 mt-7 rounded-md'>submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </Layout>
     </div>
   )
 }
