@@ -13,7 +13,7 @@ const solutionsDetails = () => {
             <Layout>
                 <div className='bg-fill pb-36'>
                     <Navigation />
-                    <div className='container mx-auto max-w-container mt-91px'>
+                    <div className='container mx-auto lg:max-w-container mt-91px'>
                         <div>
                             <h1 className='text-3xl font-bold text-primary'>Solutions</h1>
                             <p className='text-xl mt-4 text-seccondery'>Whether you are a financial institution, OTC desk, corporate treasurer, prime broker, hedge fund, asset manager or high net worth individual, Waterfort offers customizable liquidity and trading solutions.</p>

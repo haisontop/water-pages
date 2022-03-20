@@ -10,12 +10,12 @@ const Contact: NextPage = () => {
       <Layout>
         <div className='bg-fill pb-36'>
           <Navigation />
-          <div className='container mx-auto max-w-container mt-91px'>
+          <div className='container mx-auto lg:max-w-container mt-91px'>
             <h1 className='text-4xl font-bold text-primary'>Contact</h1>
           </div>
         </div>
         <div className='pt-20 bg-white -mt-20 rounded-large'>
-          <div className='grid grid-cols-2 gap-20 container mx-auto max-w-container'>
+          <div className='grid grid-cols-2 gap-20 container mx-auto lg:max-w-container'>
             <div>
               <img src="/images/logo_2.png" alt="" width="" />
               <div className='mt-56.59px'>

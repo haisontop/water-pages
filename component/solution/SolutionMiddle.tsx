@@ -2,7 +2,7 @@ import React from 'react';
 const SolutionMiddle = () => {
     return (
         <div className='-mt-36 pt-20 bg-white rounded-large'>
-            <div className='container mx-auto max-w-container'>
+            <div className='container mx-auto lg:max-w-container'>
                 {/* OTC And Block Trading */}
                 <div className='flex gap-6'>
                     <div>

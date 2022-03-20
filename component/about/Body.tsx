@@ -3,7 +3,7 @@ import { about } from "../../constant/ABOUT_MOCK_DATA.js"
 const Body = () => {
     return (
         <div className='bg-white -mt-14 rounded-large'>
-            <div className='container mx-auto max-w-container'>
+            <div className='container mx-auto lg:max-w-container'>
                 <div className='text-2xl text-primary py-20'>
                     <p>Founded in 2018, WaterFort is a leading liquidity and execution solutions provider in crypto markets. Built around our proprietary models, we have grown our footprint amongst global financial institutions and the largest exchanges globally, offering our liquidity, market making and algorithmic execution trading solutions. </p>
                 </div>

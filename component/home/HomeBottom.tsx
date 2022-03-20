@@ -4,7 +4,7 @@ import React from 'react';
 const HomeBottom = () => {
     return (
         <div className=''>
-            <div className='container mx-auto max-w-container bg-fill text-center py-20 rounded-md'>
+            <div className='container mx-auto lg:max-w-container bg-fill text-center py-20 rounded-md'>
                 <img src="/images/icon/contact.jpg" alt="" className='mx-auto' />
                 <h1 className='text-2xl font-bold mt-10'>Trade with WaterFort </h1>
                 <p className='text-xl px-36 mt-3 text-seccondery'>Find out more about trading with our regulated entities, and contact us to discover our liquidity and execution solutions for your needs.</p>

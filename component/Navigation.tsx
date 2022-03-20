@@ -4,7 +4,7 @@ import React from 'react';
 const Navigation = () => {
     return (
         <div>
-            <div className='flex space-x-50.95px container mx-auto max-w-container py-6'>
+            <div className='flex space-x-50.95px container mx-auto lg:max-w-container py-6'>
                 <div>
                     <Link href='/'>
                         <img src="/images/Logo.png" alt="" width="147.05px" />
