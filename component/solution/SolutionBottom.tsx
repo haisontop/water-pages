@@ -3,7 +3,7 @@ import React from 'react';
 
 const SolutionBottom = () => {
     return (
-        <div className='lg:mx-120px'>
+        <div className='container mx-auto max-w-container'>
             <div className='bg-fill py-20 text-center rounded-md mt-10'>
                 <h1 className='text-2xl font-bold text-primary'>Flexible Settlement & Credit Line for Trading</h1>
                 <p className='mt-4 text-xl text-third px-10'>We understand the need for efficient capital management, which comes in various forms including aggregated settlement, integration with settlement networks and establishing a credit line for trading. Contact us to find out more about the solutions we support. </p>

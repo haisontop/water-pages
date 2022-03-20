@@ -37,6 +37,9 @@ module.exports = {
       },
       fontSize : {
         "32px" : "2 rem"
+      },
+      maxWidth: {
+        'container': '82%',
       }
     },
   },
