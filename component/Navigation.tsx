@@ -5,7 +5,7 @@ const Navigation = () => {
     const [open, setOpen] = useState(false)
     return (
         <div>
-            <div className='md:flex sm:justify-between space-x-50.95px container mx-auto lg:max-w-container py-6  px-5 md:px-0 hidden'>
+            <div className='md:flex space-x-50.95px container mx-auto lg:max-w-container py-6  px-5 md:px-0 hidden'>
                 <div>
                     <Link href='/'>
                         <img src="/images/Logo.png" alt="" width="147.05px" />
