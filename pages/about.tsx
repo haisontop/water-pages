@@ -9,7 +9,7 @@ const About: NextPage = () => {
       <Layout>
         <div className='bg-fill pb-28'>
           <Navigation />
-          <h1 className='container mx-auto lg:max-w-container text-4xl font-bold text-primary mt-20'>About</h1>
+          <h1 className='container mx-auto lg:max-w-container text-4xl font-bold text-primary mt-20  px-5 md:px-0'>About</h1>
         </div>
         <Body />
       </Layout>

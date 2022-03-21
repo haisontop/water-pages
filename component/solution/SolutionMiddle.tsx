@@ -1,10 +1,10 @@
 import React from 'react'
 const SolutionMiddle = () => {
   return (
-    <div className="-mt-36 rounded-large bg-white pt-20">
+    <div className="-mt-36 rounded-large bg-white pt-20  px-5 md:px-0">
       <div className="container mx-auto lg:max-w-container">
         {/* OTC And Block Trading */}
-        <div className="flex gap-6" id="otc-blocking-trading">
+        <div className="lg:flex gap-6" id="otc-blocking-trading">
           <div>
             <div className="lg:mt-10">
               <h1 className="text-4xl font-bold text-primary">
@@ -41,7 +41,7 @@ const SolutionMiddle = () => {
           </div>
         </div>
         {/* Order Book Market Making */}
-        <div className="mt-24 flex gap-10" id="order-book">
+        <div className="mt-24 lg:flex gap-10" id="order-book">
           <div>
             <img src="/images/device.jpg" alt="" width="900px" />
           </div>
@@ -68,7 +68,7 @@ const SolutionMiddle = () => {
           </div>
         </div>
         {/* Algorithmic Execution Orders */}
-        <div className="mt-24 flex gap-10" id="algorithmic">
+        <div className="mt-24 lg:flex gap-10" id="algorithmic">
           <div>
             <div className="lg:mt-5">
               <h1 className="text-4xl font-bold text-primary">

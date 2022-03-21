@@ -8,12 +8,13 @@ import SolutionMiddle from '../../component/solution/SolutionMiddle';
 
 const solutionsDetails = () => {
     const router = useRouter();
+    console.log(router)
     return (
         <div className=''>
             <Layout>
                 <div className='bg-fill pb-36'>
                     <Navigation />
-                    <div className='container mx-auto lg:max-w-container mt-91px'>
+                    <div className='container mx-auto lg:max-w-container mt-91px  px-5 md:px-0'>
                         <div>
                             <h1 className='text-3xl font-bold text-primary'>Solutions</h1>
                             <p className='text-xl mt-4 text-seccondery'>Whether you are a financial institution, OTC desk, corporate treasurer, prime broker, hedge fund, asset manager or high net worth individual, Waterfort offers customizable liquidity and trading solutions.</p>

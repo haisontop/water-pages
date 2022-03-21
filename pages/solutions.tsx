@@ -17,7 +17,7 @@ const Solutions: NextPage = () => {
       <Layout>
         <div className="bg-fill pb-36">
           <Navigation />
-          <div className="container mx-auto mt-91px lg:max-w-container">
+          <div className="container mx-auto mt-91px lg:max-w-container px-5 md:px-0">
             <div>
               <h1 className="text-3xl font-bold text-primary">Solutions</h1>
               <p className="mt-4 text-xl text-seccondery">
@@ -27,7 +27,7 @@ const Solutions: NextPage = () => {
                 trading solutions.
               </p>
             </div>
-            <div className="mt-60px flex flex-wrap gap-10 text-xl text-seccondery">
+            <div className="mt-60px md:flex flex-wrap gap-10 text-xl text-seccondery">
               <div className="border-b-4 border-demo py-5">
                 <Link href="#otc-blocking-trading">OTC and Block Trading</Link>
               </div>
