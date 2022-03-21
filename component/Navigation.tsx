@@ -18,7 +18,7 @@ const Navigation = () => {
                         <Link href="/solutions/OTC and Block Trading">Solutions</Link>
                     </div>
                     <div className='mr-8 my-auto'>
-                        <Link href="/contact">contact</Link>
+                        <Link href="/contact">Contact</Link>
                     </div>
                 </div>
             </div>
