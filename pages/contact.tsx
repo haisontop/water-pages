@@ -8,17 +8,17 @@ const Contact: NextPage = () => {
   return (
     <div>
       <Layout>
-        <div className='bg-fill pb-36'>
+        <div className='bg-fill pb-32 md:pb-36'>
           <Navigation />
-          <div className='container mx-auto lg:max-w-container mt-91px px-5 md:px-0'>
+          <div className='container mx-auto lg:max-w-container mt-16 md:mt-91px px-5 md:px-0'>
             <h1 className='text-4xl font-bold text-primary'>Contact</h1>
           </div>
         </div>
-        <div className='pt-20 bg-white -mt-20 rounded-large  px-5 md:px-0'>
-          <div className='grid lg:grid-cols-2 gap-20 container mx-auto lg:max-w-container'>
+        <div className='pt-14 md:pt-20 bg-white -mt-20 rounded-large  px-5 md:px-0'>
+          <div className='grid lg:grid-cols-2 gap-10 md:gap-20 container mx-auto lg:max-w-container'>
             <div>
-              <img src="/images/logo_2.png" alt="" width="" />
-              <div className='mt-56.59px'>
+              <img src="/images/logo_2.png" className='w-7/12 md:w-12/12' alt="" width="" />
+              <div className='mt-7 md:mt-56.59px'>
                 <h3 className='font-bold text-2xl text-primary'>Email</h3>
                 <p className='mt-3 text-third font-light'>liquidity@waterfort.io</p>
               </div>
