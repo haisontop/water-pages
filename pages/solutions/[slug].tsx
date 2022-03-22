@@ -22,7 +22,7 @@ const solutionsDetails = () => {
                         <div className='flex gap-10 mt-60px text-seccondery text-xl'>
                             <div
                                 className={
-                                    router.asPath === "/solutions/OTC%20and%20Block%20Trading" ?
+                                    router.asPath === "/solutions#otc-blocking-trading" ?
                                         'py-5 border-b-4 border-demo text-primary'
                                         :
                                         "py-5 border-0"
@@ -31,7 +31,7 @@ const solutionsDetails = () => {
                                 <Link href="/solutions/OTC and Block Trading">OTC and Block Trading</Link>
                             </div>
                             <div className={
-                                router.asPath === "/solutions/Order%20Book%20Market%20Making" ?
+                                router.asPath === "/solutions#order-book" ?
                                     'py-5 border-b-4 border-demo text-primary'
                                     :
                                     "py-5 border-0"
@@ -39,7 +39,7 @@ const solutionsDetails = () => {
                                 <Link href="/solutions/Order Book Market Making">Order Book Market Making</Link>
                             </div>
                             <div className={
-                                router.asPath === "/solutions/Algorithmic%20Execution%20Orders" ?
+                                router.asPath === "/solutions#algorithmic" ?
                                     'py-5 border-b-4 border-demo text-primary'
                                     :
                                     "py-5 border-0"

@@ -48,7 +48,7 @@ const Navigation = () => {
                             <Link href="/about">About</Link>
                         </div>
                         <div onClick={() => setOpen(!open)} className='mt-5'>
-                            <Link href="/solutions/OTC and Block Trading">Solutions</Link>
+                            <Link href="/solutions">Solutions</Link>
                         </div>
                         <div onClick={() => setOpen(!open)} className='mt-5'>
                             <Link href="/contact">Contact</Link>
