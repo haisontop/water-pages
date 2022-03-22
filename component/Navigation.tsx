@@ -24,17 +24,22 @@ const Navigation = () => {
                 </div>
             </div>
             {/* responsive navigation */}
-            <div className='py-6 mx-5 md:hidden'>
+            <div className='py-6 mx-5 md:hidden flex justify-between'>
+                <div>
+                    <Link href='/'>
+                        <img src="/images/Logo.png" alt="" width="147.05px" />
+                    </Link>
+                </div>
                 <button onClick={() => setOpen(!open)}>
-                    <img src="/images/Logo.png" alt="" width="147.05px" />
+                    <img src="images/icon/menu.png" width={40} alt="" />
                 </button>
             </div>
             {
                 open &&
                 <div className='bg-fill fixed h-screen w-screen text-seccondery top-0 z-50'>
                     <div className='text-seccondery font-semibold text-center text-3xl mt-72'>
-                        <button onClick={() => setOpen(!open)} className='absolute top-3 left-3'>
-                            <h1>❌</h1>
+                        <button onClick={() => setOpen(!open)} className='absolute top-5 right-5'>
+                            <img src='images/icon/cross.png' alt="" width={35} className="rotate-5" />
                         </button>
                         <div onClick={() => setOpen(!open)}>
                             <Link href="/">Home</Link>

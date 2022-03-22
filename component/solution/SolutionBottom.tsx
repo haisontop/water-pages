@@ -4,11 +4,11 @@ import React from 'react';
 const SolutionBottom = () => {
     return (
         <div className='container mx-auto lg:max-w-container'>
-            <div className='bg-fill py-20 text-center rounded-md mt-10  px-5 md:px-0'>
+            <div className='bg-fill py-20 text-center rounded-md mt-10  px-3 md:px-0'>
                 <h1 className='text-2xl font-bold text-primary'>Flexible Settlement & Credit Line for Trading</h1>
                 <p className='mt-4 text-xl text-third px-10'>We understand the need for efficient capital management, which comes in various forms including aggregated settlement, integration with settlement networks and establishing a credit line for trading. Contact us to find out more about the solutions we support. </p>
             </div>
-            <div className='bg-white text-center py-20 rounded-md  px-5 md:px-0'>
+            <div className='bg-white text-center py-20 rounded-md'>
                 <div>
                     <img src="/images/icon/contact.jpg" alt="" className='mx-auto' />
                     <h1 className='text-2xl font-bold mt-10'>Trade with WaterFort </h1>
