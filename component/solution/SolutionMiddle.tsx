@@ -1,11 +1,14 @@
 import React from 'react'
 const SolutionMiddle = () => {
   return (
-    <div className="-mt-36 rounded-large bg-white pt-20  px-5 md:px-0">
+    <div className="-mt-36 rounded-large bg-white px-5  pt-10 md:px-0 md:pt-20">
       <div className="container mx-auto lg:max-w-container">
         {/* OTC And Block Trading */}
-        <div className="lg:flex gap-6" id="otc-blocking-trading">
-          <div>
+        <div
+          className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-6"
+          id="otc-blocking-trading"
+        >
+          <div className="order-2 col-span-1 md:order-1 md:col-span-2">
             <div className="lg:mt-10">
               <h1 className="text-4xl font-bold text-primary">
                 OTC and Block Trading
@@ -31,21 +34,27 @@ const SolutionMiddle = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="order-1 md:order-2">
             <img
               src="/images/criypto_image.jpg"
               alt=""
-              width="900px"
-              className="my-auto"
+              className="max-h-60 w-full object-contain md:max-h-85"
             />
           </div>
         </div>
         {/* Order Book Market Making */}
-        <div className="mt-24 lg:flex gap-10" id="order-book">
+        <div
+          className="mt-12 md:mt-24 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-6"
+          id="order-book"
+        >
           <div>
-            <img src="/images/device.jpg" alt="" width="900px" />
+            <img
+              src="/images/device.jpg"
+              alt=""
+              className="max-h-60 w-full object-contain md:max-h-85"
+            />
           </div>
-          <div>
+          <div className=" col-span-1 md:col-span-2">
             <div className="">
               <h1 className="text-4xl font-bold text-primary">
                 Order Book Market Making
@@ -68,8 +77,11 @@ const SolutionMiddle = () => {
           </div>
         </div>
         {/* Algorithmic Execution Orders */}
-        <div className="mt-24 lg:flex gap-10" id="algorithmic">
-          <div>
+        <div
+          className="mt-12 md:mt-24 grid grid-cols-1 gap-2 md:gap-6 md:grid-cols-3"
+          id="algorithmic"
+        >
+          <div className="order-2 col-span-1 md:order-1 md:col-span-2">
             <div className="lg:mt-5">
               <h1 className="text-4xl font-bold text-primary">
                 Algorithmic Execution Orders
@@ -99,8 +111,12 @@ const SolutionMiddle = () => {
               </div>
             </div>
           </div>
-          <div>
-            <img src="/images/brain.jpg" alt="" width="900px" />
+          <div className="order-1 md:order-2">
+            <img
+              src="/images/brain.jpg"
+              alt=""
+              className="max-h-60 w-full object-contain md:max-h-85"
+            />
           </div>
         </div>
       </div>

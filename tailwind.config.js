@@ -40,6 +40,12 @@ module.exports = {
       },
       maxWidth: {
         'container': '82%',
+      },
+      minWidth: {
+        '85': '350px',
+      },
+      maxHeight: {
+        '85': '350px',
       }
     },
   },
