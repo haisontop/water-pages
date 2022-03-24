@@ -22,6 +22,10 @@ export default async function handler(
     const draft = nylas.drafts.build({
       subject: 'Contact Request',
       to: [{ name: 'My Nylas Friend', email: process.env.MAIL_TO }],
+      from: [{
+        name: process.env.MAIL_FROM_NAME,
+        email: process.env.MAIL_FROM_ADDRESS
+      }],
       body: `Contact form from ${req.body.email}`,
     })
 
@@ -29,6 +33,8 @@ export default async function handler(
 
     res.status(200).json({ success: true })
   } catch (error: any) {
+    console.log("error", error)
+    console.info(error)
     res.status(200).json({ success: false })
   }
 }
