@@ -5,35 +5,27 @@ type Data = {
   success: boolean
 }
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  let nodemailer = require('nodemailer')
+  const Nylas = require('nylas')
 
-  const transporter = nodemailer.createTransport({
-    port: 465,
-    host: 'smtp.gmail.com',
-    auth: {
-      user: process.env.MAIL_ADDRESS,
-      pass: process.env.MAIL_PASSWORD,
-    },
-    secure: true,
+  Nylas.config({
+    clientId: process.env.NYLAS_CLIENT_ID,
+    clientSecret: process.env.NYLAS_CLIENT_SECRET,
   })
 
-  try {
-    const mailData = {
-      from: '"Fred Foo 👻" <liquidity@waterfort.io>',
-      to: process.env.MAIL_TO,
-      subject: 'Contact request ✔', // Subject line
-      text: `Contact form from ${req.body.email}`, // plain text body
-      html: `<b>Contact form from ${req.body.email}</b>`, // html body
-    }
+  const nylas = Nylas.with(process.env.NYLAS_ACCESS_TOKEN)
 
-    transporter.sendMail(mailData, function (err: any, info: any) {
-      if (err) console.log(err)
-      else console.log(info)
+  try {
+    const draft = nylas.drafts.build({
+      subject: 'Contact Request',
+      to: [{ name: 'My Nylas Friend', email: process.env.MAIL_TO }],
+      body: `Contact form from ${req.body.email}`,
     })
+
+    const result = await draft.send()
 
     res.status(200).json({ success: true })
   } catch (error: any) {
