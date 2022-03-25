@@ -1,16 +1,23 @@
-import React from 'react';
-import Navigation from '../Navigation';
+import React from 'react'
+import Navigation from '../Navigation'
 
 const Banner = () => {
-    return (
-        <div className='banner h-screen'>
-            <Navigation />
-            <div className='container mx-auto lg:max-w-container px-5 md:px-0'>
-                <h1 className='m-auto text-3xl md:text-5xl text-center font-bold text-primary md:leading-3.5rem mt-40 md:mt-151.5px '>The leading liquidity and execution solutions provider in crypto markets</h1>
-                <p className='text-sm md:text-xl text-center text-seccondery mt-6'>Our expertise has been powering liquidity on the world’s largest cryptocurrency exchanges and building efficient cryptocurrency markets since 2018. </p>
-            </div>
-        </div>
-    );
-};
+  return (
+    <div className="banner h-screen">
+      <Navigation />
+      <div className="container mx-auto px-5 md:px-0 lg:max-w-container">
+        <h1 className="m-auto mt-40 text-center text-3xl font-bold text-primary md:mt-151.5px md:text-5xl md:leading-3.5rem ">
+          The leading liquidity and execution solutions provider in crypto
+          markets
+        </h1>
+        <p className="mt-6 text-center text-sm text-seccondery md:text-xl">
+          At WaterFort, we have been powering crypto liquidity across
+          institutions and platforms and building efficient cryptocurrency
+          markets since 2018.{' '}
+        </p>
+      </div>
+    </div>
+  )
+}
 
-export default Banner;
+export default Banner
