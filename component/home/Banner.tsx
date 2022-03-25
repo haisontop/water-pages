@@ -3,7 +3,7 @@ import Navigation from '../Navigation'
 
 const Banner = () => {
   return (
-    <div className="banner h-screen">
+    <div className="banner pb-156.5px">
       <Navigation />
       <div className="container mx-auto px-5 md:px-0 lg:max-w-container">
         <h1 className="m-auto mt-40 text-center text-3xl font-bold text-primary md:mt-151.5px md:text-5xl md:leading-3.5rem ">
