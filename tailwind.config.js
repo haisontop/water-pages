@@ -47,7 +47,10 @@ module.exports = {
       },
       maxHeight: {
         '85': '350px',
-      }
+      },
+      fontFamily:{
+       "saolText" : "Saol-text"
+      },
     },
   },
   plugins: [],
