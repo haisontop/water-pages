@@ -3,10 +3,10 @@ import Navigation from '../Navigation'
 
 const Banner = () => {
   return (
-    <div className="banner pb-156.5px">
+    <div className="banner">
       <Navigation />
-      <div className="container mx-auto px-5 md:px-0 lg:max-w-container">
-        <h1 className="m-auto mt-40 text-center text-3xl font-bold text-primary md:mt-151.5px md:text-5xl md:leading-3.5rem ">
+      <div className="container mx-auto mt-20 sm:mt-30 md:mt-40 px-5 md:px-0 lg:max-w-container pb-40 sm:pb-40 md:pb-60">
+        <h1 className="m-auto  text-center text-3xl font-bold text-primary  md:text-5xl md:leading-3.5rem ">
           The leading liquidity and execution solutions provider in crypto
           markets
         </h1>

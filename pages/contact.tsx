@@ -31,7 +31,6 @@ const MySelect = ({ ...props }: MySelectProps) => {
 const Contact: NextPage = () => {
   const [submitted, setSubmitted] = useState(false)
   const handleSubmitForm = async (values: any) => {
-
     const { email, name, phone, telegram, company, country, interests } = values
     try {
       const result = await axios.post('/api/contact', {
@@ -50,13 +49,13 @@ const Contact: NextPage = () => {
   return (
     <div>
       <Layout>
-        <div className="bg-fill pb-32 md:pb-36">
+        <div className="bg-fill pb-28">
           <Navigation />
           <div className="container mx-auto mt-16 px-5 md:mt-91px md:px-0 lg:max-w-container">
             <h1 className="text-4xl font-bold text-primary">Contact</h1>
           </div>
         </div>
-        <div className="-mt-20 rounded-large bg-white px-5 pt-14  md:px-0 md:pt-20">
+        <div className="-mt-14 rounded-large bg-white px-5 pt-14  md:px-0 md:pt-20">
           <div className="container mx-auto grid gap-10 md:gap-20 lg:max-w-container lg:grid-cols-2">
             <div>
               <img
