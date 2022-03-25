@@ -5,23 +5,25 @@ import Navigation from '../component/Navigation'
 import { COUNTRY_LIST } from '../constant/COUNTRY_LIST'
 import { PHONE_CODE } from '../constant/PHONE_CODE'
 import { useMemo, useState } from 'react'
-import { string } from 'yup'
 import axios from 'axios'
-
+import * as Yup from 'yup'
 interface MySelectProps {
   className: string
   name: string
   children: React.ReactNode
 }
 
+const ContactSchema = Yup.object().shape({
+  name: Yup.string().required('Required'),
+  country: Yup.string().required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+})
+
 const MySelect = ({ ...props }: MySelectProps) => {
   const [field, meta] = useField(props)
   return (
     <div>
       <select {...field} {...props} />
-      {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
-      ) : null}
     </div>
   )
 }
@@ -29,20 +31,21 @@ const MySelect = ({ ...props }: MySelectProps) => {
 const Contact: NextPage = () => {
   const [submitted, setSubmitted] = useState(false)
   const handleSubmitForm = async (values: any) => {
-    console.log('values', values)
+
+    const { email, name, phone, telegram, company, country, interests } = values
     try {
-      const result = await axios.post('/api/contact', { email: values.email })
+      const result = await axios.post('/api/contact', {
+        email,
+        name,
+        phone,
+        telegram,
+        company,
+        country,
+        interests: interests.join(','),
+      })
       setSubmitted(true)
     } catch (error) {}
   }
-
-  const phoneCodes = useMemo(() => {
-    const codesList = Object.values(PHONE_CODE).filter((code) => !!code)
-
-    return codesList.filter(function (item, pos) {
-      return codesList.indexOf(item) == pos
-    })
-  }, [])
 
   return (
     <div>
@@ -76,23 +79,12 @@ const Contact: NextPage = () => {
                   email: '',
                   phone: '',
                   company: '',
+                  country: '',
                   telegram: '',
                   message: '',
-                  checked: [],
+                  interests: [],
                 }}
-                validate={(values) => {
-                  const errors = Object.assign({})
-                  if (!values.email) {
-                    errors.email = 'Required'
-                  } else if (
-                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                      values.email
-                    )
-                  ) {
-                    errors.email = 'Invalid email address'
-                  }
-                  return errors
-                }}
+                validationSchema={ContactSchema}
                 onSubmit={(values, { setSubmitting }) => {
                   handleSubmitForm(values)
                 }}
@@ -121,6 +113,9 @@ const Contact: NextPage = () => {
                           onBlur={handleBlur}
                           value={values.name}
                         />
+                        {errors.email && (
+                          <span className="text-red-500">{errors.name}</span>
+                        )}
                       </label>
                     </div>
                     <div className="mt-7">
@@ -145,27 +140,15 @@ const Contact: NextPage = () => {
                       <label>
                         <span className="text-seccondery">Phone</span>
                         <br />
-                        <div className="flex rounded-sm border-2 px-2">
-                          <MySelect
-                            className="outline-none h-full font-semibold text-third"
-                            name="phoneCode"
-                          >
-                            {phoneCodes.map((code) => (
-                              <option key={code} value={code}>
-                                {code}
-                              </option>
-                            ))}
-                          </MySelect>
-                          <input
-                            type="text"
-                            placeholder="Input your phone number"
-                            className="outline-none mt-1 ml-3 w-full rounded-sm px-3 py-2"
-                            name="phone"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.phone}
-                          />
-                        </div>
+                        <input
+                          type="text"
+                          placeholder="Input your phone number"
+                          className="outline-none mt-1 w-full rounded-sm border-2 px-3 py-2"
+                          name="phone"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          value={values.phone}
+                        />
                       </label>
                     </div>
                     <div className="mt-7">
@@ -213,6 +196,9 @@ const Contact: NextPage = () => {
                             </option>
                           ))}
                         </MySelect>
+                        {errors.country && (
+                          <span className="text-red-500">{errors.country}</span>
+                        )}
                       </label>
                     </div>
                     <div className="mt-7 text-primary">
@@ -224,7 +210,7 @@ const Contact: NextPage = () => {
                         <div role="group" aria-labelledby="checkbox-group">
                           <Field
                             type="checkbox"
-                            name="interested"
+                            name="interests"
                             value="OTC and Block Trading"
                             className="mt-5"
                           />
@@ -232,7 +218,7 @@ const Contact: NextPage = () => {
                           <br />
                           <Field
                             type="checkbox"
-                            name="interested"
+                            name="interests"
                             value="Order Book Market Making"
                             className="mt-3"
                           />
@@ -240,7 +226,7 @@ const Contact: NextPage = () => {
                           <br />
                           <Field
                             type="checkbox"
-                            name="interested"
+                            name="interests"
                             value="Algorithmic Execution Orders"
                             className="mt-3"
                           />
@@ -250,7 +236,7 @@ const Contact: NextPage = () => {
                           <br />
                           <Field
                             type="checkbox"
-                            name="interested"
+                            name="interests"
                             value="Others"
                             className="mt-3"
                           />
