@@ -31,7 +31,7 @@ const MySelect = ({ ...props }: MySelectProps) => {
 const Contact: NextPage = () => {
   const [submitted, setSubmitted] = useState(false)
   const handleSubmitForm = async (values: any) => {
-    const { email, name, phone, telegram, company, country, interests } = values
+    const { email, name, phone, telegram, company, country, interests, message } = values
     try {
       const result = await axios.post('/api/contact', {
         email,
@@ -41,6 +41,7 @@ const Contact: NextPage = () => {
         company,
         country,
         interests: interests.join(','),
+        message
       })
       setSubmitted(true)
     } catch (error) {}
