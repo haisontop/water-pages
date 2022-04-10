@@ -4,7 +4,7 @@ import { service } from '../../constant/SERVICE_MOCK_DATA'
 const HomeMiddle = () => {
   return (
     <div>
-      <div className="-mt-16 grid gap-10 rounded-large bg-white py-20 lg:grid-cols-3 lg:px-120px">
+      <div className=" grid gap-10 bg-white py-20 lg:grid-cols-3 lg:px-120px">
         {service.map((service) => (
           <div className="text-center">
             <img src={service.img} alt="" className="mx-auto" />

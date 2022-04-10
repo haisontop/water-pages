@@ -28,7 +28,8 @@ module.exports = {
         "demo" : "#617FF2",
         'button' : "#7183F3",
         'fill' : "#F5F7FF",
-        'third' : "#848E9C"
+        'third' : "#848E9C",
+        'banner' : "#F5F5F5"
       },
       lineHeight : {
         "3.5rem" : "3.5rem"

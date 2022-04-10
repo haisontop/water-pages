@@ -4,22 +4,22 @@ import React, { useState } from 'react'
 const Navigation = () => {
   const [open, setOpen] = useState(false)
   return (
-    <div>
-      <div className="container mx-auto hidden space-x-50.95px py-6 px-5  md:flex md:px-0 lg:max-w-container">
-        <div className='cursor-pointer'>
+    <div className='bg-white py-5'>
+      <div className="container mx-auto hidden justify-between  px-5  md:flex md:px-0 lg:max-w-container">
+        <div className='cursor-pointer flex items-center'>
           <Link href="/">
-            <img src="/images/Logo.png" alt="" width="147.05px" />
+            <img src="/images/Logo.png" alt="" width="40%" />
           </Link>
         </div>
         <div className="font-semibold text-seccondery md:flex">
           <div className="my-auto mr-8">
-            <Link href="/about">About</Link>
+            <Link href="/about">ABOUT</Link>
           </div>
           <div className="my-auto mr-8">
-            <Link href="/solutions">Solutions</Link>
+            <Link href="/solutions">SOLUTION</Link>
           </div>
           <div className="my-auto mr-8">
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">CONTACT</Link>
           </div>
         </div>
       </div>
