@@ -23,13 +23,14 @@ module.exports = {
          '56.59px' : '56.59px'
       },
       colors : {
-        "primary" : "#26292C",
+        "primary" : "#11263F",
         'seccondery' : "#565C64",
         "demo" : "#617FF2",
         'button' : "#7183F3",
         'fill' : "#F5F7FF",
         'third' : "#848E9C",
-        'banner' : "#F5F5F5"
+        'banner' : "#F5F5F5",
+        "blue-gray" : "#465567"
       },
       lineHeight : {
         "3.5rem" : "3.5rem"

@@ -12,6 +12,12 @@
     rgba(96, 126, 241, 1) 100%
   );
 }
+.HomeBottom{
+  background: url('../public/images/shutterstock_2132170515 1.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
 /* modal animation */
 .modal {
