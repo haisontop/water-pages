@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 
 const Navigation = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const route = useRouter();
   return (
     <div className='bg-white py-5'>
       <div className="container mx-auto hidden justify-between  px-5  md:flex md:px-0 lg:max-w-container">
@@ -12,14 +14,14 @@ const Navigation = () => {
           </Link>
         </div>
         <div className="font-semibold text-seccondery md:flex">
-          <div className="my-auto mr-8">
-            <Link href="/about">ABOUT</Link>
+          <div className="my-auto mr-10">
+            <Link href="/about"><p className={`${route.asPath === "/about" && "text-ring-color"} cursor-pointer text-base`}>About</p></Link>
           </div>
-          <div className="my-auto mr-8">
-            <Link href="/solutions">SOLUTION</Link>
+          <div className="my-auto mr-10">
+            <Link href="/solutions"><p className={`${route.asPath === "/solutions" && "text-ring-color"} cursor-pointer text-base`}>SOLUTION</p></Link>
           </div>
-          <div className="my-auto mr-8">
-            <Link href="/contact">CONTACT</Link>
+          <div className="my-auto">
+            <Link href="/contact"><p className={`${route.asPath === "/contact" && "text-ring-color"} cursor-pointer text-base`}>CONTACT</p></Link>
           </div>
         </div>
       </div>
