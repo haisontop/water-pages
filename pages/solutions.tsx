@@ -7,6 +7,7 @@ import HomeBottom from '../component/home/HomeBottom'
 import Layout from '../component/Layout'
 import Navigation from '../component/Navigation'
 import SolutionBanner from '../component/solution/SolutionBanner'
+import SolutionBottom from '../component/solution/SolutionBottom'
 import SolutionMiddle from '../component/solution/SolutionMiddle'
 
 const Solutions: NextPage = () => {
@@ -16,6 +17,8 @@ const Solutions: NextPage = () => {
      <Navigation />
      <SolutionBanner />
      <SolutionMiddle />
+     <SolutionBottom />
+     <HomeBottom />
    </Layout>
   )
 }

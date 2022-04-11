@@ -30,7 +30,8 @@ module.exports = {
         'fill' : "#F5F7FF",
         'third' : "#848E9C",
         'banner' : "#F5F5F5",
-        "blue-gray" : "#465567"
+        "blue-gray" : "#465567",
+        'ring-color' : "#0095B8"
       },
       lineHeight : {
         "3.5rem" : "3.5rem"
@@ -58,7 +59,8 @@ module.exports = {
       },
       backgroundImage: {
          'about-banner' : "url('/images/stock-photo--d-binary-tunnel-background-data-stream-concept-96438890 1.png')",
-         'solution-banner' : "url('/images/shutterstock_761874310 1.png')"
+         'solution-banner' : "url('/images/shutterstock_761874310 1.png')",
+         'contact-banner' : "url('/images/contact-bg.png')"
       },
       gridTemplateColumns: {
         'about' : 'repeat(2, minmax(0, max-content))',
