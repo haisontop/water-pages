@@ -11,6 +11,7 @@ export default function SolutionMiddle() {
             title={so.title}
             subtitle={so.subtitle}
             list={so.list}
+            id={so.id}
             />)
         }
     </div>

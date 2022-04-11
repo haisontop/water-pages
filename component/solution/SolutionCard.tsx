@@ -3,11 +3,12 @@ interface props{
     title: string;
     subtitle: string;
     list: string[];
+    id : string;
 }
 
-export default function SolutionCard({title, subtitle, list} : props) {
+export default function SolutionCard({title, subtitle, list, id} : props) {
   return (
-    <div className='grid md:grid-cols-1fr-2fr md:gap-10 mb-20'>
+    <div id={id} className='grid md:grid-cols-1fr-2fr md:gap-10 mb-20'>
       <div>
          <h1 className='text-4xl mb-10 md:mb-0 text-primary'>{title}</h1>
       </div>
