@@ -39,13 +39,13 @@ const Navigation = () => {
           <div className="mt-72 text-center text-3xl font-semibold text-seccondery">
             <button
               onClick={() => setOpen(!open)}
-              className="absolute top-5 right-5"
+              className="absolute top-7 right-5"
             >
               <img
                 src="images/icon/cross.png"
                 alt=""
                 width={35}
-                className="rotate-5"
+                className=""
               />
             </button>
             <div onClick={() => setOpen(!open)}>

@@ -55,6 +55,14 @@ module.exports = {
       },
       inset: {
         '3px': '3px',
+      },
+      backgroundImage: {
+         'about-banner' : "url('/images/stock-photo--d-binary-tunnel-background-data-stream-concept-96438890 1.png')",
+         'solution-banner' : "url('/images/shutterstock_761874310 1.png')"
+      },
+      gridTemplateColumns: {
+        'about' : 'repeat(2, minmax(0, max-content))',
+        '1fr-2fr': '1fr 2fr'
       }
     },
   },

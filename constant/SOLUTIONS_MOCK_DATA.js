@@ -3,9 +3,9 @@ export const solutions = [
         title : "OTC and Block Trading",
         subtitle : "Get access to competitive quotes across the widest range of cryptocurrencies, with fast response times and instantaneous execution.",
         list : [
-            "Fast automated quote times with instantaneous execution",
-            "Direct and synthetic cross currency pairs (e.g. AXS/XRP, SOL/AXS, BNB/DOGE etc.)",
-            "Support for API connectivity for pricing and execution"
+            "Competitive quotes with tight spreads, fast quote times with instant execution, and reliable liquidity in all market conditions.",
+            "Coverage across the widest range of crypto pairs.",
+            "Support for automated pricing and execution via API or manual OTC trading over secured communication channels."
         ],
         img : "/images/criypto_image.jpg"
     },
