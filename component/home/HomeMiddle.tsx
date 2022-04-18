@@ -6,7 +6,7 @@ const HomeMiddle = () => {
     <div>
       <div className=" grid gap-10 bg-white py-20 lg:grid-cols-3 lg:px-120px">
         {service.map((service) => (
-          <div className='text-center md:text-left'>
+          <div className='text-center md:text-left h-72 relative'>
             <img src={service.img} alt="" className="mx-auto md:mx-0" />
             <h2 className="mt-27px text-2xl font-bold text-primary md:w-2/3">
               {service.name}
@@ -15,7 +15,7 @@ const HomeMiddle = () => {
               {service.discription}
             </p>
             <Link href={service.link}>
-              <button className="mt-6 flex mx-auto md:mx-0 bg-primary px-6 py-2 text-white">
+              <button className="mt-6 absolute bottom-0 left-1/4 md:left-0  flex mx-auto md:mx-0 bg-primary px-6 py-2 text-white">
                 Find Out More
                 <img
                   src="/images/icon/arrow.png"
